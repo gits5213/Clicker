@@ -14,5 +14,10 @@ while ($true) { ^
     [MouseClick]::mouse_event(0x0004, 0, 0, 0, [UIntPtr]::Zero); ^
     Start-Sleep -Milliseconds 500; ^
     [System.Windows.Forms.Cursor]::Position = $originalPosition; ^
+    Start-Sleep -Milliseconds 500; ^
+    [MouseClick]::mouse_event(0x0002, 0, 0, 0, [UIntPtr]::Zero); ^
+    [MouseClick]::mouse_event(0x0004, 0, 0, 0, [UIntPtr]::Zero); ^
+    Start-Sleep -Milliseconds 500; ^
     Start-Sleep -Seconds 30; ^
+    
 }"
